@@ -6,8 +6,12 @@ import type { OAuthConfig, PublishPostInput, PublishPostResult, SocialIntegratio
 const graphBaseUrl = "https://graph.facebook.com/v21.0";
 
 export class MetaIntegration implements SocialIntegration {
-  constructor(public provider: SocialProvider.FACEBOOK | SocialProvider.INSTAGRAM | SocialProvider.WHATSAPP) {}
-
+    constructor(
+    public provider:
+      | typeof SocialProvider.FACEBOOK
+      | typeof SocialProvider.INSTAGRAM
+      | typeof SocialProvider.WHATSAPP
+  ) {}
   getOAuthConfig(): OAuthConfig {
     return {
       provider: this.provider,
