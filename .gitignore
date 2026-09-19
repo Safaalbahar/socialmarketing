@@ -1,0 +1,11 @@
+.env
+.env.local
+.next
+node_modules
+dist
+coverage
+*.log
+prisma/dev.db
+
+Safa Al Bahar Marketing/
+Safa Al Bahar Marketing-1/
